@@ -29,12 +29,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.lusostudios.asphaltcalc.adapters.ItemViewAdapter;
+import com.lusostudios.asphaltcalc.calculations.ConcreteBags;
+import com.lusostudios.asphaltcalc.preferences_and_other.PreferenceDecimalFormat;
+import com.lusostudios.asphaltcalc.room_database.LineItem;
+import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
 
-import ConCalc.Activity.adapters.ItemViewAdapter;
-import ConCalc.Activity.calculations.ConcreteBags;
-import ConCalc.Activity.preferences_and_other.PreferenceDecimalFormat;
-import ConCalc.Activity.room_database.LineItem;
-import ConCalc.Activity.room_database.LineItemViewModel;
+import ConCalc.Activity.Fragment_MainDirections;
 
 public class Fragment_Main extends Fragment {
 

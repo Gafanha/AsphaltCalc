@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;
 
-import ConCalc.Activity.R;
+import com.lusostudios.asphaltcalc.R;
 
 public class InputImages {
 

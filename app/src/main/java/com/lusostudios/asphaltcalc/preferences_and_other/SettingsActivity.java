@@ -8,9 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
-
-import ConCalc.Activity.R;
-import ConCalc.Activity.room_database.LineItemViewModel;
+import com.lusostudios.asphaltcalc.R;
+import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
 
 public class SettingsActivity extends AppCompatActivity {
 

@@ -4,32 +4,20 @@
 
     <item
         android:icon="@drawable/slab_square_svg"
-        android:title="Slab - Rectangle" />
-    <item
-        android:icon="@drawable/slab_square_svg"
-        android:title="Slab - Area" />
-    <item
-        android:icon="@drawable/slab_round_svg"
-        android:title="Slab - Circle" />
-    <item
-        android:icon="@drawable/slab_round_svg"
-        android:title="Slab - Half Circle" />
+        android:title="@string/rectangle" />
     <item
         android:icon="@drawable/wall_svg"
-        android:title="Wall" />
+        android:title="@string/triangle" />
+    <item
+        android:icon="@drawable/slab_round_svg"
+        android:title="@string/circle" />
+    <item
+        android:icon="@drawable/slab_round_svg"
+        android:title="@string/half_circle" />
     <item
         android:icon="@drawable/footing_svg"
-        android:title="Footing" />
+        android:title="@string/fillet" />
     <item
-        android:icon="@drawable/curb_gutter_svg"
-        android:title="Curb" />
-    <item
-        android:icon="@drawable/curb_gutter_svg"
-        android:title="Curb and Gutter" />
-    <item
-        android:icon="@drawable/column_round_svg"
-        android:title="Column - Round" />
-    <item
-        android:icon="@drawable/column_square_svg"
-        android:title="Column - Square" />
+        android:icon="@drawable/slab_square_svg"
+        android:title="@string/area" />
 </menu>

@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import ConCalc.Activity.R;
-import ConCalc.Activity.input_screen.InputImages;
+import com.lusostudios.asphaltcalc.R;
+import com.lusostudios.asphaltcalc.input_screen.InputImages;
 
 public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ItemViewHolder> {
 

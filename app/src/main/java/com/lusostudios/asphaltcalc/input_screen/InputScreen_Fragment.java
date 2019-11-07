@@ -23,14 +23,15 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.lusostudios.asphaltcalc.R;
+import com.lusostudios.asphaltcalc.calculations.Volume_Helper;
+import com.lusostudios.asphaltcalc.room_database.LineItem;
+import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ConCalc.Activity.calculations.Volume_Helper;
-import ConCalc.Activity.room_database.LineItem;
-import ConCalc.Activity.R;
-import ConCalc.Activity.room_database.LineItemViewModel;
+import ConCalc.Activity.input_screen.InputScreen_FragmentArgs;
 
 public class InputScreen_Fragment extends Fragment {
 
