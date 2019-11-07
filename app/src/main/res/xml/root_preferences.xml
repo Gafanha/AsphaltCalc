@@ -1,0 +1,35 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Unit Settings">
+
+        <ListPreference
+            android:defaultValue="US"
+            android:entries="@array/Unit_System_Pref_Entries"
+            android:entryValues="@array/Unit_System_Pref_Values"
+            android:key="units_system"
+            android:summary="Current Units: %s"
+            android:title="Unit System (US/Metric)" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Other Settings">
+
+        <EditTextPreference
+            android:defaultValue="5"
+            android:inputType="number"
+            android:key="waste"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Waste Percentage" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/precision_Pref_Entries"
+            android:entryValues="@array/precision_Pref_Values"
+            android:key="decimalPlaces"
+            android:summary="Current Decimal Places: %s"
+            android:title="Decimal Places" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

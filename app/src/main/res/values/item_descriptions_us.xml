@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Slab_Rectangle_Hints">
+        <item>With in feet</item>
+        <item>Length in feet</item>
+        <item>Thickness in inches</item>
+    </string-array>
+
+    <string-array name="Slab_Circle_Hints">
+        <item>Radius in feet</item>
+        <item>Thickness in inches</item>
+    </string-array>
+
+    <string-array name="Slab_Area_Hints">
+        <item>Area - Square Feet</item>
+        <item>Thickness in inches</item>
+    </string-array>
+
+    <string-array name="Curb_Hints">
+        <item>Thickness in inches</item>
+        <item>Height in inches</item>
+        <item>Length in feet</item>
+    </string-array>
+
+    <string-array name="Curb_Gutter_Hints">
+        <item>Curb Thickness in inches</item>
+        <item>Curb Height in inches</item>
+        <item>Gutter Thickness in inches</item>
+        <item>Gutter Height in inches</item>
+        <item>Length in feet</item>
+    </string-array>
+
+    <string-array name="Wall_Hints">
+        <item>Thickness in inches</item>
+        <item>Height in inches</item>
+        <item>Length in feet</item>
+    </string-array>
+
+    <string-array name="Footing_Hints">
+        <item>Width  in inches</item>
+        <item>Height in inches</item>
+        <item>Length in feet</item>
+    </string-array>
+
+    <string-array name="Column_Round_Hints">
+        <item>Radius in inches</item>
+        <item>Height in feet</item>
+    </string-array>
+
+    <string-array name="Column_Square_Hints">
+        <item>Width in inches</item>
+        <item>length in inches</item>
+        <item>Height in feet</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/slab_square_svg"
+        android:title="Slab - Rectangle" />
+    <item
+        android:icon="@drawable/slab_square_svg"
+        android:title="Slab - Area" />
+    <item
+        android:icon="@drawable/slab_round_svg"
+        android:title="Slab - Circle" />
+    <item
+        android:icon="@drawable/slab_round_svg"
+        android:title="Slab - Half Circle" />
+    <item
+        android:icon="@drawable/wall_svg"
+        android:title="Wall" />
+    <item
+        android:icon="@drawable/footing_svg"
+        android:title="Footing" />
+    <item
+        android:icon="@drawable/curb_gutter_svg"
+        android:title="Curb" />
+    <item
+        android:icon="@drawable/curb_gutter_svg"
+        android:title="Curb and Gutter" />
+    <item
+        android:icon="@drawable/column_round_svg"
+        android:title="Column - Round" />
+    <item
+        android:icon="@drawable/column_square_svg"
+        android:title="Column - Square" />
+</menu>

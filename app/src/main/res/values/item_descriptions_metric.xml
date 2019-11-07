@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Slab_Rectangle_Hints_metric">
+        <item>With in meters</item>
+        <item>Length in meters</item>
+        <item>Thickness in centimeters</item>
+    </string-array>
+
+    <string-array name="Slab_Circle_Hints_metric">
+        <item>Radius in meters</item>
+        <item>Thickness in centimeters</item>
+    </string-array>
+
+    <string-array name="Slab_Area_Hints_metric">
+        <item>Area - Square Meters</item>
+        <item>Thickness in centimeter</item>
+    </string-array>
+
+    <string-array name="Curb_Hints_metric">
+        <item>Thickness in centimeters</item>
+        <item>Height in centimeters</item>
+        <item>Length in meters</item>
+    </string-array>
+
+    <string-array name="Curb_Gutter_Hints_metric">
+        <item>Curb Thickness in centimeters</item>
+        <item>Curb Height in centimeters</item>
+        <item>Gutter Thickness in centimeters</item>
+        <item>Gutter Height in centimeters</item>
+        <item>Length in centimeters</item>
+    </string-array>
+
+    <string-array name="Wall_Hints_metric">
+        <item>Thickness centimeters</item>
+        <item>Height in meters</item>
+        <item>Length in meters</item>
+    </string-array>
+
+    <string-array name="Footing_Hints_metric">
+        <item>Width in centimeters</item>
+        <item>Height in centimeters</item>
+        <item>Length in meters</item>
+    </string-array>
+
+    <string-array name="Column_Round_Hints_metric">
+        <item>Radius in centimeters</item>
+        <item>Height in meters</item>
+    </string-array>
+
+    <string-array name="Column_Square_Hints_metric">
+        <item>Width in centimeters</item>
+        <item>Length in centimeters</item>
+        <item>Height in meters</item>
+    </string-array>
+
+</resources>

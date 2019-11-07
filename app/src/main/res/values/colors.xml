@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme Main Colors -->
+
+    <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
+    <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
+    <!--selection controls.-->
+
+    <color name="colorPrimary">#0A4461</color>
+    <color name="colorPrimaryVariant">#042E3F</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#FF8900</color>
+    <color name="colorSecondaryVariant">#975102</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!--colorBackground appears behind scrollable content and is used for the default window-->
+    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+    <!--and menus. colorError is used to indicate an error state for components such as-->
+    <!--text fields.-->
+    <color name="colorBackground">#DBDBDB</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorSurface">#307395</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+    <!--on which they appear.-->
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+
+    <!-- Custom colors for specific uses -->
+    <color name="logoColor">#f39c15</color>
+    <color name="colorPrefsBackground">#727272</color>
+
+</resources>

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.lusostudios.asphaltcalc"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Androidx Dependencies
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core:1.2.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.1.0'     // appcompat library
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-rc01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    implementation 'androidx.preference:preference:1.1.0'
+
+    // Navigation & SafeArgs Dependencies
+    implementation 'androidx.navigation:navigation-fragment:2.2.0-rc01'
+    implementation 'androidx.navigation:navigation-ui:2.2.0-rc01'
+
+    // Material Component Dependencies
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+
+    // LifeCycle Dependencies
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    // Room Dependencies
+    implementation 'androidx.room:room-runtime:2.2.1'
+    annotationProcessor 'androidx.room:room-compiler:2.2.1'
+
+    // AdMob dependencies
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+}
+
+apply plugin: "androidx.navigation.safeargs"

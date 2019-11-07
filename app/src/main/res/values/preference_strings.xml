@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Preference Titles -->
+    <string name="title_settings">Settings</string>
+    <string name="unit_system_title">Unit System Settings</string>
+    <string name="units_title">Units</string>
+    <string name="waste_title">% Waste</string>
+
+    <!-- Preference Messages -->
+    <string name="unit_system_message">Choose a unit system</string>
+    <string name="units_message">Choose the units you prefer.</string>
+    <string name="waste_message">Percent Waste Amount .</string>
+    <string name="precision_message">Choose the number of decimal places</string>
+
+    <!-- Unit and Unit System lists -->
+    <string-array name="Unit_System_Pref_Entries">
+        <item>US/Standard Units</item>
+        <item>Metric Units</item>
+    </string-array>
+
+    <string-array name="Unit_System_Pref_Values">
+        <item>US</item>
+        <item>Metric</item>
+    </string-array>
+
+    <string-array name="Unit_US_Pref_Entries">
+        <item>Cubic Yards</item>
+        <item>Cubic Feet</item>
+    </string-array>
+
+    <string-array name="Unit_US_Pref_Values">
+        <item>Cubic Yards</item>
+        <item>Cubic Feet</item>
+    </string-array>
+
+    <string-array name="Unit_Metric_Pref_Entries">
+        <item>Cubic Meter</item>
+        <item>Cubic CentiMeter</item>
+    </string-array>
+
+    <string-array name="Unit_Metric_Pref_Values">
+        <item>Cubic Meter</item>
+        <item>Cubic Centimeter</item>
+    </string-array>
+
+    <!-- Precision related lists -->
+    <string-array name="precision_Pref_Entries">
+        <item>1 decimal</item>
+        <item>2 decimals</item>
+        <item>3 decimals</item>
+        <item>4 decimals</item>
+    </string-array>
+
+    <string-array name="precision_Pref_Values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+</resources>
