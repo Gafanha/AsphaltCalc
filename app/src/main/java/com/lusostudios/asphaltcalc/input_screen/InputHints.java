@@ -1,11 +1,9 @@
 package com.lusostudios.asphaltcalc.input_screen;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
-import android.util.Log;
 
-import ConCalc.Activity.R;
+import com.lusostudios.asphaltcalc.R;
 
 public class InputHints {
 
