@@ -23,7 +23,6 @@ public class BottomSheetMenu extends BottomSheetDialogFragment {
         View v = inflater.inflate(R.layout.bottom_sheet_menu, container, false);
 
         //String TAG = "BottomSheetMenu";
-
         RecyclerView recyclerView = v.findViewById(R.id.recyclerViewMenu);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         //recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
