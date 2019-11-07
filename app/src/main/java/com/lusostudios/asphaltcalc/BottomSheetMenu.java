@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.lusostudios.asphaltcalc.adapters.MenuItemAdapter;
 
-import ConCalc.Activity.adapters.MenuItemAdapter;
+import ConCalc.Activity.Fragment_MainDirections;
 
 public class BottomSheetMenu extends BottomSheetDialogFragment {
     @Nullable
