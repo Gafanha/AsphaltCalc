@@ -16,6 +16,7 @@
         app:layout_anchor="@id/bottom_bar"
         app:srcCompat="@drawable/ic_add_black_24dp" />
 
+
     <!-- Container for the various fragments -->
     <fragment
         android:id="@+id/fragment_container"
