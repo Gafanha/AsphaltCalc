@@ -1,6 +1,5 @@
 package com.lusostudios.asphaltcalc.calculations;
 
-import android.text.NoCopySpan;
 import android.util.Log;
 
 import java.util.List;
