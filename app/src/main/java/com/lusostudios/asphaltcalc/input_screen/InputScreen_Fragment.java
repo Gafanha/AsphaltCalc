@@ -31,8 +31,6 @@ import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-import ConCalc.Activity.input_screen.InputScreen_FragmentArgs;
-
 public class InputScreen_Fragment extends Fragment {
 
     String TAG = "InputScreen";

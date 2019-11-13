@@ -14,49 +14,45 @@ public class InputHints {
         String[] hints = null;
         Resources res = context.getResources();
 
-        if ("US".equals(units)){
-            if ("Slab - Rectangle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Rectangle_Hints);
-            } else if ("Slab - Circle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Circle_Hints);
-            } else if ("Slab - Half Circle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Circle_Hints);
-            } else if ("Slab - Area".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Area_Hints);
-            } else if ("Curb".equals(type)) {
-                hints = res.getStringArray(R.array.Curb_Hints);
-            } else if ("Curb and Gutter".equals(type)) {
-                hints = res.getStringArray(R.array.Curb_Gutter_Hints);
-            } else if ("Wall".equals(type)) {
-                hints = res.getStringArray(R.array.Wall_Hints);
-            } else if ("Footing".equals(type)) {
-                hints = res.getStringArray(R.array.Footing_Hints);
-            } else if ("Column - Round".equals(type)) {
-                hints = res.getStringArray(R.array.Column_Round_Hints);
-            } else if ("Column - Square".equals(type)) {
-                hints = res.getStringArray(R.array.Column_Square_Hints);
+        if ("US".equals(units)) {
+            if (res.getString(R.string.rectangle).equals(type)) {
+                hints = res.getStringArray(R.array.Rectangle_Hints);
+
+            } else if (res.getString(R.string.triangle).equals(type)) {
+                hints = res.getStringArray(R.array.Triangle_Hints);
+
+            } else if (res.getString(R.string.circle).equals(type)) {
+                hints = res.getStringArray(R.array.Circle_Hints);
+
+            } else if (res.getString(R.string.half_circle).equals(type)) {
+                hints = res.getStringArray(R.array.Circle_Hints);
+
+            } else if (res.getString(R.string.fillet).equals(type)) {
+                hints = res.getStringArray(R.array.Fillet_Hints);
+
+            } else if (res.getString(R.string.area).equals(type)) {
+                hints = res.getStringArray(R.array.Area_Hints);
+
             }
         } else {
-            if ("Slab - Rectangle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Rectangle_Hints_metric);
-            } else if ("Slab - Circle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Circle_Hints_metric);
-            } else if ("Slab - Half Circle".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Circle_Hints_metric);
-            } else if ("Slab - Area".equals(type)) {
-                hints = res.getStringArray(R.array.Slab_Area_Hints_metric);
-            } else if ("Curb".equals(type)) {
-                hints = res.getStringArray(R.array.Curb_Hints_metric);
-            } else if ("Curb and Gutter".equals(type)) {
-                hints = res.getStringArray(R.array.Curb_Gutter_Hints_metric);
-            } else if ("Wall".equals(type)) {
-                hints = res.getStringArray(R.array.Wall_Hints_metric);
-            } else if ("Footing".equals(type)) {
-                hints = res.getStringArray(R.array.Footing_Hints_metric);
-            } else if ("Column - Round".equals(type)) {
-                hints = res.getStringArray(R.array.Column_Round_Hints_metric);
-            } else if ("Column - Square".equals(type)) {
-                hints = res.getStringArray(R.array.Column_Square_Hints_metric);
+            if (res.getString(R.string.rectangle).equals(type)) {
+                hints = res.getStringArray(R.array.Rectangle_Hints_metric);
+
+            } else if (res.getString(R.string.triangle).equals(type)) {
+                hints = res.getStringArray(R.array.Triangle_Hints_metric);
+
+            } else if (res.getString(R.string.circle).equals(type)) {
+                hints = res.getStringArray(R.array.Circle_Hints_metric);
+
+            } else if (res.getString(R.string.half_circle).equals(type)) {
+                hints = res.getStringArray(R.array.Circle_Hints_metric);
+
+            } else if (res.getString(R.string.fillet).equals(type)) {
+                hints = res.getStringArray(R.array.Fillet_Hints_metric);
+
+            } else if (res.getString(R.string.area).equals(type)) {
+                hints = res.getStringArray(R.array.Area_Hints_metric);
+
             }
         }
         return hints;
