@@ -8,7 +8,7 @@ public class Calculations {
 
     // TODO still have to check metric math.
 
-    public double Area(String units, double area, double thickness, double density) {
+    public double Area(String units, double area, double thickness, double density, boolean isNegative) {
 
         if ("US".equals(units)) {
             cubicFeet = area * (thickness / 12);
@@ -17,11 +17,15 @@ public class Calculations {
             cubicMeters = area * (thickness / 100);
             tons = cubicMeters * (density / 1000);
         }
+
+        if (isNegative) {
+            tons = tons * -1;
+        }
+
         return tons;
     }
 
-    public double Circle(String units, double radius,
-                         double thickness, double density) {
+    public double Circle(String units, double radius, double thickness, double density, boolean isNegative) {
 
         if ("US".equals(units)) {
             cubicFeet = Math.PI * Math.pow(radius, 2) * (thickness / 12);
@@ -31,11 +35,14 @@ public class Calculations {
             tons = cubicMeters * (density / 1000);
         }
 
+        if (isNegative) {
+            tons = tons * -1;
+        }
+
         return tons;
     }
 
-    public double Fillet(String units, double length,
-                         double thickness, double density) {
+    public double Fillet(String units, double length, double thickness, double density, boolean isNegative) {
         // length - feet/meters. width - feet/meters. thickness -
         // inches/centimeters
 
@@ -46,6 +53,11 @@ public class Calculations {
             cubicMeters = (.215 * length) * (thickness / 100);
             tons = cubicMeters * (density / 1000);
         }
+
+        if (isNegative) {
+            tons = tons * -1;
+        }
+
         return tons;
     }
 
@@ -66,8 +78,7 @@ public class Calculations {
         return tons;
     }
 
-    public double Triangle(String units, double height,
-                           double width, double thickness, double density) {
+    public double Triangle(String units, double height, double width, double thickness, double density, boolean isNegative) {
 
         if ("US".equals(units)) {
             cubicFeet = ((height * width) / 2) * (thickness / 12);
@@ -76,6 +87,11 @@ public class Calculations {
             cubicMeters = ((height * width) / 2) * (thickness / 100);
             tons = cubicMeters * (density / 1000);
         }
+
+        if (isNegative) {
+            tons = tons * -1;
+        }
+
         return tons;
     }
 }

@@ -1,10 +1,8 @@
 package com.lusostudios.asphaltcalc.calculations;
 
-import android.util.Log;
-
 import java.util.List;
 
-/**
+  /**
  * Created by Sergio on 4/28/2017.
  */
 
@@ -22,23 +20,19 @@ public class Volume_Helper {
                 volume = calculation.Rectangle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), valuesArray.get(3), isNegative);
                 break;
             case "Circle":
-                volume = new ConcreteVolume().SlabCircle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative);
+                volume = calculation.Circle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative);
                 break;
             case "Half Circle":
-                volume = (new ConcreteVolume().SlabCircle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative)) / 2;
+                volume = (calculation.Circle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative)) / 2;
                 break;
             case "Area":
-                for (int i = 0; i < valuesArray.size(); i++) {
-                    Log.d(TAG, "onClick: value array - " + valuesArray.get(i));
-                }
-                volume = new ConcreteVolume().SlabArea(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative);
+                volume = calculation.Area(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative);
                 break;
             case "Triangle":
-                volume = new ConcreteVolume().Curb(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), valuesArray.get(3), isNegative);
+                volume = calculation.Triangle(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), valuesArray.get(3), isNegative);
                 break;
             case "Fillet":
-                volume = new ConcreteVolume().Curb_and_Gutter(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), valuesArray.get(3),
-                        valuesArray.get(4), valuesArray.get(5), isNegative);
+                volume = calculation.Fillet(units, valuesArray.get(0), valuesArray.get(1), valuesArray.get(2), isNegative);
                 break;
         }
         return volume;

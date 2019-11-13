@@ -113,7 +113,6 @@ public class InputScreen_Fragment extends Fragment {
                     }
                     editTextWaste.setText(lineItems.get(0).get_waste() + "");
 
-                    Log.d(TAG, "onChanged: isNegative - " + lineItems.get(0).isNegative());
                     negativeSwitch.setChecked(lineItems.get(0).isNegative());
                 }
             });
@@ -198,12 +197,6 @@ public class InputScreen_Fragment extends Fragment {
                 lineItem.set_units(units);
                 // TODO change to read actual switch. Not set to true for testing purposes.
                 lineItem.setNegative(negativeSwitch.isChecked());
-
-                if (negativeSwitch.isChecked()){
-                    Log.d(TAG, "onClick: negativeSwitch is Checked");
-                } else {
-                    Log.d(TAG, "onClick: negativeSwitch NOT Checked");
-                }
 
                 LineItemViewModel lineItemViewModel = new LineItemViewModel(getActivity().getApplication());
 

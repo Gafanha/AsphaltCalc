@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = LineItem.class, version = 5, exportSchema = false)
+@Database(entities = LineItem.class, version = 1, exportSchema = false)
 public abstract class LineItemDatabase extends RoomDatabase {
 
     private static LineItemDatabase instance;
