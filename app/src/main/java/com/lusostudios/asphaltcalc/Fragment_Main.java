@@ -1,7 +1,6 @@
 package com.lusostudios.asphaltcalc;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -30,12 +29,9 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.lusostudios.asphaltcalc.adapters.ItemViewAdapter;
-import com.lusostudios.asphaltcalc.calculations.ConcreteBags;
 import com.lusostudios.asphaltcalc.preferences_and_other.PreferenceDecimalFormat;
 import com.lusostudios.asphaltcalc.room_database.LineItem;
 import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
-
-import ConCalc.Activity.Fragment_MainDirections;
 
 public class Fragment_Main extends Fragment {
 
@@ -93,10 +89,6 @@ public class Fragment_Main extends Fragment {
                     totalCubicYards = totalCubicYards + items.get(i).getVolume();
                 }
                 textRunningTotal.setText(currentDecimalFormat.format(totalCubicYards));
-                ConcreteBags concreteBags =new ConcreteBags();
-                ArrayList bagsList =  concreteBags.BagQuantity((totalCubicYards));
-                textViewBagsOne.setText(currentDecimalFormat.format(bagsList.get(0)));
-                textViewBagsTwo.setText(currentDecimalFormat.format(bagsList.get(1)));
             }
         });
 

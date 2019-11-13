@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.lusostudios.asphaltcalc.adapters.MenuItemAdapter;
 
-import ConCalc.Activity.Fragment_MainDirections;
-
 public class BottomSheetMenu extends BottomSheetDialogFragment {
     @Nullable
     @Override
@@ -25,7 +23,6 @@ public class BottomSheetMenu extends BottomSheetDialogFragment {
         //String TAG = "BottomSheetMenu";
         RecyclerView recyclerView = v.findViewById(R.id.recyclerViewMenu);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        //recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setHasFixedSize(true);
         MenuItemAdapter adapter = new MenuItemAdapter(getActivity());
         recyclerView.setAdapter(adapter);
