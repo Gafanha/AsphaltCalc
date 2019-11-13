@@ -17,11 +17,11 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ItemVi
 
     Activity activity;
     private OnItemClickListener listener;
-    private String[] menuItemList = {"Slab - Rectangle", "Slab - Area", "Slab - Circle", "Slab - Half Circle",
-    "Curb", "Curb and Gutter", "Wall", "Footing", "Column - Round", "Column - Square"};
+    private String[] menuItemList;
 
     public MenuItemAdapter(Activity activity) {
         this.activity = activity;
+        menuItemList = activity.getResources().getStringArray(R.array.bottom_sheet_menu);
     }
 
     @NonNull
