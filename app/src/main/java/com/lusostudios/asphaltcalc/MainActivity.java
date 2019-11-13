@@ -32,8 +32,6 @@ import com.lusostudios.asphaltcalc.preferences_and_other.SettingsActivity;
 import com.lusostudios.asphaltcalc.room_database.LineItemViewModel;
 import com.lusostudios.asphaltcalc.utils.Pixel_Utilities;
 
-import ConCalc.Activity.Fragment_MainDirections;
-
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private String TAG = "MainActivity";
