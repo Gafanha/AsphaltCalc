@@ -61,7 +61,7 @@ public class InputScreen_Fragment extends Fragment {
         inputLayout5 = rootView.findViewById(R.id.textInputLayout5);
         inputLayoutWaste = rootView.findViewById(R.id.textInputLayoutWaste);
         editText1 = rootView.findViewById(R.id.editText1);
-        //editText1.requestFocus(); // Get focus for the first EditText.
+        editText1.requestFocus(); // Get focus for the first EditText.
         editText2 = rootView.findViewById(R.id.editText2);
         editText3 = rootView.findViewById(R.id.editText3);
         editText4 = rootView.findViewById(R.id.editText4);
