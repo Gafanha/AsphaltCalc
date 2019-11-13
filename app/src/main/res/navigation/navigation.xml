@@ -3,29 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/fragment_Main">
-
     <fragment
         android:id="@+id/fragment_Main"
-        android:name="ConCalc.Activity.Fragment_Main"
-        android:label="fragment_main"
-        tools:layout="@layout/main_fragment">
+        android:name="com.lusostudios.asphaltcalc.Fragment_Main"
+        android:label="main_fragment2"
+        tools:layout="@layout/main_fragment2" >
         <action
             android:id="@+id/action_fragment_Main_to_inputScreen_Fragment"
             app:destination="@id/inputScreen_Fragment" />
         <action
-            android:id="@+id/action_fragment_Main_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_fragment_Main_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
     </fragment>
     <fragment
         android:id="@+id/inputScreen_Fragment"
-        android:name="ConCalc.Activity.input_screen.InputScreen_Fragment"
-        android:label="fragment_input2"
-        tools:layout="@layout/input_fragment">
+        android:name="com.lusostudios.asphaltcalc.input_screen.InputScreen_Fragment"
+        android:label="input_fragment"
+        tools:layout="@layout/input_fragment" >
         <action
             android:id="@+id/action_inputScreen_Fragment_to_fragment_Main"
-            app:destination="@id/fragment_Main"
-            app:popUpTo="@+id/fragment_Main"
-            app:popUpToInclusive="true" />
+            app:destination="@id/fragment_Main" />
         <argument
             android:name="type"
             app:argType="integer" />
@@ -34,12 +31,13 @@
             app:argType="string" />
         <argument
             android:name="id"
-            android:defaultValue="null"
             app:argType="string"
-            app:nullable="true" />
+            app:nullable="true"
+            android:defaultValue="null" />
     </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="ConCalc.Activity.SettingsFragment"
-        android:label="SettingsFragment" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.lusostudios.asphaltcalc.preferences_and_other.SettingsActivity"
+        android:label="settings_activity"
+        tools:layout="@layout/settings_activity" />
 </navigation>
