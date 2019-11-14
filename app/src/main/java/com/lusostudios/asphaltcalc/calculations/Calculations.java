@@ -1,7 +1,5 @@
 package com.lusostudios.asphaltcalc.calculations;
 
-import android.app.Activity;
-
 public class Calculations {
 
     public double cubicFeet, cubicMeters, tons;
