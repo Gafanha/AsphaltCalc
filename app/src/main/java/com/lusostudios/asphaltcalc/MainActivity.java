@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private String TAG = "MainActivity";
     BottomAppBar bottomAppBar;
     FloatingActionButton fab;
-    BottomSheetMenu bottomSheetMenu = new BottomSheetMenu();
     View fragmentContainer;
 
     Context context = this;
@@ -62,17 +61,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(bottomAppBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
+        // Get navigation controller.
+        final NavController navController = Navigation.findNavController(this, R.id.fragment_container);
+
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bottomSheetMenu.show(getSupportFragmentManager(), "BottomSheetMenu");
+                navController.navigate(Fragment_MainDirections.actionFragmentMainToBottomSheetMenu());
             }
         });
 
         // Hide bottom bar and fab when main fragment is not displayed.
         // Also close bottom sheet.
-        NavController navController = Navigation.findNavController(this, R.id.fragment_container);
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {

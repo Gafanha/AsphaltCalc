@@ -30,8 +30,8 @@ public class BottomSheetMenu extends BottomSheetDialogFragment {
         adapter.setOnItemClickListener(new MenuItemAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(String string) {
-                Fragment_MainDirections.ActionFragmentMainToInputScreenFragment action =
-                        Fragment_MainDirections.actionFragmentMainToInputScreenFragment(0, string);
+                BottomSheetMenuDirections.ActionBottomSheetMenuToInputScreenFragment action =
+                        BottomSheetMenuDirections.actionBottomSheetMenuToInputScreenFragment(0, string);
                 action.setId(null);
                 action.setType(0);
                 action.setTitle(string);

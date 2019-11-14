@@ -39,13 +39,14 @@ public class Fragment_Main extends Fragment {
     private View rootView;
     private TextView textRunningTotal, tvUnits;
     private DecimalFormat currentDecimalFormat;
-    private String units, waste;
+    private String units, density;
     private LineItemViewModel lineItemViewModel;
     private SharedPreferences sharedPreferences;
     private View viewSummary;
+    double totalVolume = 0;
 
     public Fragment_Main() {
-        // Empty constructor required for fragment subclasses
+        // Empty constructor required for fragment subclasses.
     }
 
     @Override
@@ -67,7 +68,7 @@ public class Fragment_Main extends Fragment {
         final TextView textViewBagsOne = viewSummary.findViewById(R.id.tvBagsOne);
         final TextView textViewBagsTwo = viewSummary.findViewById(R.id.tvBagsTwo);
 
-        // Get SharedPreferences instance. To be used later to get Units and Waste preferences.
+        // Get SharedPreferences instance. To be used later to get Units and Density preferences.
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext()/* Activity context */);
         // Get decimal format from preferences using Helper class written by me.
         PreferenceDecimalFormat preferenceDecimalFormat = new PreferenceDecimalFormat();
@@ -83,12 +84,13 @@ public class Fragment_Main extends Fragment {
         lineItemViewModel.getAllLive().observe(getViewLifecycleOwner(), new Observer<List<LineItem>>() {
             @Override
             public void onChanged(@Nullable List<LineItem> items) {
-                double totalCubicYards = 0;
+
                 adapter.setItemList(getActivity(), items);
+                totalVolume = 0;
                 for (int i = 0; i < items.size(); i++) {
-                    totalCubicYards = totalCubicYards + items.get(i).getVolume();
+                    totalVolume = totalVolume + items.get(i).getVolume();
                 }
-                textRunningTotal.setText(currentDecimalFormat.format(totalCubicYards));
+                textRunningTotal.setText(currentDecimalFormat.format(totalVolume));
             }
         });
 
@@ -147,13 +149,8 @@ public class Fragment_Main extends Fragment {
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putDouble("TotalVolume", totalVolume);
         super.onSaveInstanceState(outState);
-        //Log.d(TAG, "onSaveInstanceState: totalVolume - " + textRunningTotal.getText().toString());
-        if (!textRunningTotal.getText().toString().isEmpty()){
-            outState.putDouble("totalVolume", Double.parseDouble(textRunningTotal.getText().toString()));
-        } else {
-            outState.putDouble("totalVolume", 0.0);
-        }
     }
 
 
@@ -178,12 +175,12 @@ public class Fragment_Main extends Fragment {
 
     private void UpdateScreen() {
         units = sharedPreferences.getString("units_system", "US");
-        waste = sharedPreferences.getString("waste", "5");
+        density = sharedPreferences.getString("density", "145");
 
         if ("US".equals(units)) {
-            tvUnits.setText("Cubic Yards");
+            tvUnits.setText("US: Tons");
         } else if ("Metric".equals(units)) {
-            tvUnits.setText("Cubic Meters");
+            tvUnits.setText("Metric Tons");
         } else {
             Toast.makeText(getActivity(), "No units set", Toast.LENGTH_SHORT).show();
         }
