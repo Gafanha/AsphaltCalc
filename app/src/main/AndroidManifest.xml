@@ -17,9 +17,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".preferences_and_other.SettingsActivity">
+
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9268421194358335~1728672241" />
+            android:value="ca-app-pub-9268421194358335~6644075040" />
     </application>
 
 </manifest>
