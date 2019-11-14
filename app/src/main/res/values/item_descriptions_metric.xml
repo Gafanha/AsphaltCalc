@@ -13,45 +13,20 @@
     </string-array>
 
     <string-array name="Area_Hints_metric">
-        <item>Area - Square Meters</item>
+        <item>Area in square meters</item>
         <item>Thickness in centimeter</item>
     </string-array>
 
     <string-array name="Triangle_Hints_metric">
+        <item>Height in meters</item>
+        <item>Width in meters</item>
         <item>Thickness in centimeters</item>
-        <item>Height in centimeters</item>
-        <item>Length in meters</item>
+
     </string-array>
 
     <string-array name="Fillet_Hints_metric">
-        <item>Curb Thickness in centimeters</item>
-        <item>Curb Height in centimeters</item>
-        <item>Gutter Thickness in centimeters</item>
-        <item>Gutter Height in centimeters</item>
-        <item>Length in centimeters</item>
-    </string-array>
-
-    <string-array name="Wall_Hints_metric">
-        <item>Thickness centimeters</item>
-        <item>Height in meters</item>
         <item>Length in meters</item>
-    </string-array>
-
-    <string-array name="Footing_Hints_metric">
-        <item>Width in centimeters</item>
-        <item>Height in centimeters</item>
-        <item>Length in meters</item>
-    </string-array>
-
-    <string-array name="Column_Round_Hints_metric">
-        <item>Radius in centimeters</item>
-        <item>Height in meters</item>
-    </string-array>
-
-    <string-array name="Column_Square_Hints_metric">
-        <item>Width in centimeters</item>
-        <item>Length in centimeters</item>
-        <item>Height in meters</item>
+        <item>Thickness in centimeters</item>
     </string-array>
 
 </resources>

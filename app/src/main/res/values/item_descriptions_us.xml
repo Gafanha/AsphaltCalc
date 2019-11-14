@@ -18,17 +18,14 @@
     </string-array>
 
     <string-array name="Triangle_Hints">
+        <item>Height in feet</item>
+        <item>Width in feet</item>
         <item>Thickness in inches</item>
-        <item>Height in inches</item>
-        <item>Length in feet</item>
     </string-array>
 
     <string-array name="Fillet_Hints">
-        <item>Curb Thickness in inches</item>
-        <item>Curb Height in inches</item>
-        <item>Gutter Thickness in inches</item>
-        <item>Gutter Height in inches</item>
         <item>Length in feet</item>
+        <item>Thickness in inches</item>
     </string-array>
 
 </resources>
