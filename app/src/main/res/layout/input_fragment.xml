@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/slab_square_svg" />
+        app:srcCompat="@drawable/square_svg" />
 
     <TextView
         android:id="@+id/textViewTitle"
