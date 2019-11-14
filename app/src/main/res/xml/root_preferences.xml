@@ -16,12 +16,13 @@
     <PreferenceCategory app:title="Other Settings">
 
         <EditTextPreference
-            android:defaultValue="5"
+            android:defaultValue="145"
             android:inputType="number"
-            android:key="waste"
+            android:key="density"
+            android:summary="Enter Default Density"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="Waste Percentage" />
+            android:title="Density" />
         <ListPreference
             android:defaultValue="1"
             android:entries="@array/precision_Pref_Entries"
