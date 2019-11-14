@@ -141,19 +141,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutWaste"
+        android:id="@+id/textInputLayoutDensity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Waste %"
+        android:hint="Density"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextWaste"
+            android:id="@+id/editDensity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
@@ -166,8 +166,8 @@
         android:layout_height="60dp"
         android:text="Done"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutWaste"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayoutWaste" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutDensity"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutDensity" />
 
     <Switch
         android:id="@+id/negativeOrPositiveSwitch"
