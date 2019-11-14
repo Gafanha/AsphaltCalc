@@ -2,7 +2,6 @@ package com.lusostudios.asphaltcalc.input_screen;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class InputScreen_Fragment extends Fragment {
     ImageView imageView;
     TextView textViewTitle;
     TextInputLayout inputLayout1, inputLayout2, inputLayout3, inputLayout4, inputLayout5, inputLayoutWaste;
-    TextInputEditText editText1, editText2, editText3, editText4, editText5, editTextWaste;
+    TextInputEditText editText1, editText2, editText3, editText4, editText5, editTextDensity;
     Switch negativeSwitch;
     Button buttonDone;
     String units;
@@ -59,14 +58,14 @@ public class InputScreen_Fragment extends Fragment {
         inputLayout3 = rootView.findViewById(R.id.textInputLayout3);
         inputLayout4 = rootView.findViewById(R.id.textInputLayout4);
         inputLayout5 = rootView.findViewById(R.id.textInputLayout5);
-        inputLayoutWaste = rootView.findViewById(R.id.textInputLayoutWaste);
+        inputLayoutWaste = rootView.findViewById(R.id.textInputLayoutDensity);
         editText1 = rootView.findViewById(R.id.editText1);
         editText1.requestFocus(); // Get focus for the first EditText.
         editText2 = rootView.findViewById(R.id.editText2);
         editText3 = rootView.findViewById(R.id.editText3);
         editText4 = rootView.findViewById(R.id.editText4);
         editText5 = rootView.findViewById(R.id.editText5);
-        editTextWaste = rootView.findViewById(R.id.editTextWaste);
+        editTextDensity = rootView.findViewById(R.id.editDensity);
         negativeSwitch = rootView.findViewById(R.id.negativeOrPositiveSwitch);
         buttonDone = rootView.findViewById(R.id.buttonDone);
 
@@ -95,6 +94,9 @@ public class InputScreen_Fragment extends Fragment {
             lineItemViewModel.getItemByID(Integer.parseInt(id)).observe(getActivity(), new Observer<List<LineItem>>() {
                 @Override
                 public void onChanged(@Nullable List<LineItem> lineItems) {
+                    if (lineItems.isEmpty()) {
+                        return;
+                    }
                     lineItem = lineItems.get(0);
                     title = lineItems.get(0).getTitle();
                     setUpHints();
@@ -111,7 +113,7 @@ public class InputScreen_Fragment extends Fragment {
                     if (inputLayout5.VISIBLE == 0) {
                         editText5.setText(lineItems.get(0).getDescription5());
                     }
-                    editTextWaste.setText(lineItems.get(0).get_waste() + "");
+                    editTextDensity.setText(lineItems.get(0).get_waste() + "");
 
                     negativeSwitch.setChecked(lineItems.get(0).isNegative());
                 }
@@ -121,6 +123,7 @@ public class InputScreen_Fragment extends Fragment {
             lineItem = new LineItem();
             title = InputScreen_FragmentArgs.fromBundle(getArguments()).getTitle();
             setUpHints();
+            editTextDensity.setText(sharedPreferences.getString("density", "145"));
         }
 
         // Handle done button click.
@@ -173,8 +176,8 @@ public class InputScreen_Fragment extends Fragment {
                 }
 
                 if (inputLayoutWaste.getVisibility() == View.VISIBLE) {
-                    if (editTextValidation.isValidated(editTextWaste)) {
-                        valuesArray.add(Double.parseDouble(editTextWaste.getText().toString()));
+                    if (editTextValidation.isValidated(editTextDensity)) {
+                        valuesArray.add(Double.parseDouble(editTextDensity.getText().toString()));
                     } else {
                         Toast.makeText(buttonDone.getContext(), "Please enter " + inputLayoutWaste.getHint(), Toast.LENGTH_SHORT).show();
                         return;
@@ -192,7 +195,7 @@ public class InputScreen_Fragment extends Fragment {
                 lineItem.setDescription3(editText3.getText().toString());
                 lineItem.setDescription4(editText4.getText().toString());
                 lineItem.setDescription5(editText5.getText().toString());
-                lineItem.set_waste(Double.parseDouble(editTextWaste.getText().toString()));
+                lineItem.set_waste(Double.parseDouble(editTextDensity.getText().toString()));
                 lineItem.setVolume(volume);
                 lineItem.set_units(units);
                 // TODO change to read actual switch. Not set to true for testing purposes.
