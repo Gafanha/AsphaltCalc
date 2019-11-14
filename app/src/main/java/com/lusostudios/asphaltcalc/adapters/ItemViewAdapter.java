@@ -34,7 +34,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ItemVi
         this.context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         // Inflate the custom layout
-        View itemView = inflater.inflate(R.layout.line_item2, parent, false);
+        View itemView = inflater.inflate(R.layout.line_item, parent, false);
         return new ItemViewHolder(itemView);
     }
 
@@ -50,7 +50,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ItemVi
         // Use helper class to build description.
         BuildItemDescription itemDescription = new BuildItemDescription();
         viewHolder.txDescription.setText(itemDescription.getDescription(lineItem));
-        viewHolder.txWaste.setText("Waste: " + lineItem.get_waste());
+        viewHolder.txDensity.setText("Density: " + lineItem.get_waste());
         viewHolder.txVolume.setText(format.format(lineItem.getVolume()));
         // TODO Set color based on whether volume is negative or not.
         if (lineItem.getVolume() >= 0) {
@@ -80,7 +80,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ItemVi
         private ImageView ivIcon;
         private TextView txTittle;
         private TextView txDescription;
-        private TextView txWaste;
+        private TextView txDensity;
         private TextView txVolume;
 
         public ItemViewHolder(@NonNull View itemView) {
@@ -88,7 +88,7 @@ public class ItemViewAdapter extends RecyclerView.Adapter<ItemViewAdapter.ItemVi
             ivIcon = itemView.findViewById(R.id.ivIcon);
             txTittle = itemView.findViewById(R.id.tvTitle);
             txDescription = itemView.findViewById(R.id.tv60PoundBags);
-            txWaste = itemView.findViewById(R.id.tvWaste);
+            txDensity = itemView.findViewById(R.id.tvDensity);
             txVolume = itemView.findViewById(R.id.tvVolume);
 
             itemView.setOnClickListener(new View.OnClickListener() {
