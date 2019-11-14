@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_fragment_Main_to_settingsActivity"
             app:destination="@id/settingsActivity" />
+        <action
+            android:id="@+id/action_fragment_Main_to_bottomSheetMenu"
+            app:destination="@id/bottomSheetMenu" />
     </fragment>
     <fragment
         android:id="@+id/inputScreen_Fragment"
@@ -40,4 +43,13 @@
         android:name="com.lusostudios.asphaltcalc.preferences_and_other.SettingsActivity"
         android:label="settings_activity"
         tools:layout="@layout/settings_activity" />
+    <dialog
+        android:id="@+id/bottomSheetMenu"
+        android:name="com.lusostudios.asphaltcalc.BottomSheetMenu"
+        android:label="bottom_sheet_menu"
+        tools:layout="@layout/bottom_sheet_menu" >
+        <action
+            android:id="@+id/action_bottomSheetMenu_to_inputScreen_Fragment"
+            app:destination="@id/inputScreen_Fragment" />
+    </dialog>
 </navigation>
