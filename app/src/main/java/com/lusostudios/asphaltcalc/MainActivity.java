@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     BottomAppBar bottomAppBar;
     FloatingActionButton fab;
     View fragmentContainer;
-
     Context context = this;
 
     @Override
